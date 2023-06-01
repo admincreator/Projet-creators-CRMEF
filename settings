@@ -1,0 +1,77 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>ajouter eleve</title>
+		
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="stylesheet" href="static/css/STYLE1.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="shortcut icon" href="static/images/05.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	
+	
+		
+		
+		  <div class="login-form">
+			<h1>Paramètres</h1>
+			<div class="container">
+				<div class="main">
+					 <div class="content">
+						 <form action="/add_student"  method="post"   enctype="multipart/form-data">
+							<label>Nom d'utilisateur:</label>
+
+							<input style="color: black;" type="text" name="name" value="" id="" placeholder="name" required autofocus="">
+							<label>email:</label>
+
+							 
+							 
+						<input style="color: black;" type="email" name="email" id="" value="" placeholder="department" required autofocus="">
+						<label>password:</label>
+
+							 <input style="color: black;" type="password" name="password" value="" id="" placeholder="password" required autofocus="">
+							 <button class="btn" type="submit" name="submit">modifier </button>
+								
+									 
+						 </form>
+						 <form method="GET" action="/home">
+			
+							<button type="submit">home</button>
+						</form>                 </div>
+					 <div class="form-img">
+						 <img src="static/images/01.png" alt="">
+					 </div>
+				</div>
+			</div>
+		  </div>
+		  
+	</body>
+	</html>
+	
+	<h2>Paramètres du compte</h2>
+	
+	
+	<form method="post" action="{{ url_for('update_settings') }}">
+	  <div class="form-group">
+	    <label>Nom d'utilisateur:</label>
+	    <input type="text" name="name" value="{{ user_info.name }}" class="form-control" required>
+	  </div>
+	  <div class="form-group">
+	    <label>Adresse email:</label>
+	    <input type="email" name="email" value="{{ user_info.email }}" class="form-control" required>
+	  </div>
+	  <div class="form-group">
+	    <label>Mot de passe:</label>
+	    <input type="password" name="password" value="{{ user_info.password }}" class="form-control" required>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Enregistrer</button>
+	</form>
+	
+	<form method="GET" action="/home">
+	    <button type="submit">Home</button>
+	</form>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
