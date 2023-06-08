@@ -13,5 +13,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="login-form">
+        <h1>inscription</h1>
+        <div class="container">
+            <div class="main">
+                 <div class="content">
+                     <h2>S'inscrire</h2>
+                     <form action="/register"  method="post"   enctype="multipart/form-data">
+
+                         
+                         <input style="color: black;" type="email" name="email" id="" value="" placeholder="email" required autofocus="">
+                         <input style="color: black;" type="text" name="name" id="" placeholder="Nom" required autofocus="">
+                         <input style="color: black;" type="text" name="prenom" id="" placeholder="prenom" required autofocus="">
+
+
+                         <input style="color: black;" type="password" name="password" id="" placeholder="le mot de passe" required autofocus="">
+                         <h6>votre photo personnelle</h6>
+                         <input type="file" name="image">
+  
+          
+                    <button class="btn" type="submit" name="submit">
+                    S'inscrire
+                         </button>
+                     </form>
+                     <p class="account">Vous avez un compte <a href="/login">connecter</a></p>
+                 </div>
+                 <div class="form-img">
+                     <img src="static/images/02.png" alt="">
+                 </div>
+            </div>
+        </div>
+      </div>
+      
+   
+</body>
+</html>
+
   
     
